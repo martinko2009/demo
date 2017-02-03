@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>datepickerdemo</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+	<!-- ================== BEGIN BASE CSS ================= -->
+	<link rel="stylesheet" type="text/css" href="../../../../public/css/nodemodules/jquery-ui/themes/base/datepicker.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../public/css/jqalert/jquery-ui-1.10.3.custom.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../public/css/nodemodules/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../public/css/nodemodules/bootstrap/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../public/css/nodemodules/layer/layer.css" />
+	<!-- ================== END BASE CSS ================= -->
+	<link rel="stylesheet" type="text/css" href="../../../../public/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../public/css/datepickerdemo.css" />
+	<script src="../../../../public/js/dll/dist/lib-min.js"></script>
+	<!--
+	<script src="../../../../public/js/dll/dist/commondll-min.js"></script>
+	-->
+	<style>
+		#datepickerbody{
+			width:100%;
+			height:100%;
+		}
+	</style>
+</head>
+<body class="pace-done">
+	<div id="datepickerbody" @click="hiddendatepick">
+	<input type="text" class="date1" />&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="弹出alert" @click="alertdemo"/>
+	<div class="main_body_middle5_2_body" id="general1"></div>
+	</div>
+</body>
+</html>

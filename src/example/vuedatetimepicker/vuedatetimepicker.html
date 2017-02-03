@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>vuedatetimepicker测试页面</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link rel="stylesheet" type="text/css" href="../../../../public/css/jqalert/jquery-ui-1.10.3.custom.css" />
+<link rel="stylesheet" type="text/css" href="../../../../public/css/nodemodules/bootstrap/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="../../../../public/css/nodemodules/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../../../../public/js/vuedatetimepicker/css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" type="text/css" href="../../../../public/css/nodemodules/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="../../../../public/css/common.css" />
+<script src="../../../../public/js/dll/dist/lib-min.js"></script>
+<style>
+.m_main1 {
+  background-color: #d7e8fa;
+  margin: 0;
+  padding: 0;
+  height:100%;
+}
+.datetimediv{
+	width:300px;
+	height:40px;
+}
+</style>
+</head>
+<body>
+	<div class="m_main1" id="vuedatetimepickerdemo" style="">
+		<div class="middlelogindiv">
+			<div class="datetimediv">
+			<vuedatetimepicker class="vue-picker1"  :type="vuedatetimeoptions.type" :time-format="vuedatetimeoptions.timeFormat" :language="vuedatetimeoptions.language" :model="changedatetimevalue1" v-on:changedatetime="changedatetime1"></vuedatetimepicker>
+			</div>
+			<br/><br/><br/><input type="text" class="datetimediv" v-model="changedatetimevalue1" />
+		</div>
+	</div>
+</body>
+</html> 

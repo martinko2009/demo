@@ -1,0 +1,14 @@
+/node_modules/*
+/attached/*
+/app/*
+/app_bak/*
+/*.bat
+!/deploy.bat
+!/debug.bat
+!/startserver.bat
+/.externalToolBuilders
+/.settings
+/.project
+/bin/
+/.classpath
+/public/js/echarts

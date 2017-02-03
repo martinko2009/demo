@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>select2测试页面</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link rel="stylesheet" type="text/css" href="../../../../public/css/nodemodules/bootstrap/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="../../../../public/css/jqalert/jquery-ui-1.10.3.custom.css"/>
+<link rel="stylesheet" type="text/css" href="../../../../public/js/components/select2/css/select2.css" />
+<link rel="stylesheet" type="text/css" href="../../../../public/js/components/select2/css/select2-bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../../../../public/css/common.css" />
+<script src="../../../../public/js/dll/dist/lib-min.js"></script>
+<style>
+.select1div{
+	margin-top:20px;
+	width:50%;
+	height:30px;
+}
+.select2div{
+	margin-top:20px;
+	width:50%;
+	height:30px;
+}
+.m_main1 {
+  background-color: #d7e8fa;
+  margin: 0;
+  padding: 0;
+  height:100%;
+}
+/*
+.select2div .select2-container-multi .select2-choices .select2-search-field,
+.select2div .select2-container-multi .select2-choices .select2-search-choice,
+.select2div .form-control.select2-container .select2-choices{
+	background-color:yellow;
+	background-image:none;
+}
+.select1div .select2-container .select2-choice{
+	background-color:red;
+}
+*/
+</style>
+</head>
+<body>
+	<div class="m_main1" id="select2demo" style="">
+		<div class="middlelogindiv">
+			<div class="select1div">
+				<select2 :options="options1" :allowclear="allowclear" v-on:select2change="selectonchange1"></select2>
+			</div>{{selectvalue1}}
+			<div class="select2div">
+				<select2 :multiple="multiple" :options="options2" v-on:select2change="selectonchange2"  :containercss="containerCss1"></select2>
+			</div>{{selectvalue2}}
+			<div class="select2div">
+				<select2ajax :multiple="multiple" :ajax="ajax" :formatresult="formatresult" :formatselection="formatselection" :containercss="containerCss1" v-on:select2changeajax="selectonchange2ajax"></select2ajax>
+			</div>{{selectvalue3}}
+		</div>
+	</div>
+</body>
+</html>

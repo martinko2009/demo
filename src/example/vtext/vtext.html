@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>vtext测试页面</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+	<!-- ================== BEGIN BASE CSS ================= -->
+	<!-- ================== END BASE CSS ================= -->
+	<link rel="stylesheet" type="text/css" href="../../../../public/css/common.css" />
+	<script src="../../../../../public/js/dll/dist/lib-min.js"></script>
+	<style>
+		.left{
+			position:absolute;
+			left:0px;
+			top:0px;
+			width:100px;
+			height:100%;
+		}
+		.left1{
+			position:absolute;
+			left:100px;
+			top:0px;
+			width:300px;
+			height:100%;
+		}
+		.left2{
+			position:absolute;
+			left:400px;
+			top:0px;
+			width:200px;
+			height:100%;
+			padding:20px;
+		}
+		.itemdiv{
+			width:100%;
+			height:30px;
+		}
+		.item{
+			width:50%;
+			height:30px;
+			float:left;
+		}
+		.red{
+			background:red;
+		}
+	</style>
+</head>
+<body class="pace-done">
+	<div id="vtextroot">
+	<div class="left">
+		<template v-for="item in items">
+			<div class="itemdiv">
+				<div class="item red" v-text="changeItemsFilter(item)"></div><div class="item">{{item}}</div>
+			</div>
+		</template>
+	</div>
+	<div class="left1">
+	序号：<input text="type" v-model="changeindex"/>&nbsp;&nbsp;&nbsp;&nbsp;值：<input text="type" v-model="changevalue"/><button @click="changeMethod">改变</button>
+	</div>
+	<div class="left2" v-text="changevaluestrFilter(changevaluestr)"></div>
+	</div>
+</body>
+</html>

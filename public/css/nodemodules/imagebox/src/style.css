@@ -1,0 +1,143 @@
+.imagebox-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.25s linear;
+  z-index: 99;
+  display: none;
+}
+.imagebox-overlay.active {
+  background-color: rgba(0,0,0,0.8);
+}
+.imagebox-container {
+  will-change: left, top;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: -webkit-grab;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  -ms-behavior: url(/backgroundsize.min.htc);
+}
+.imagebox-info {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  line-height: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.imagebox-container:hover .imagebox-prev,
+.imagebox-container:hover .imagebox-next {
+  opacity: 0.3
+}
+.imagebox-container .imagebox-prev:hover,
+.imagebox-container .imagebox-next:hover {
+  opacity: 1 !important;
+}
+.imagebox-prev,
+.imagebox-next {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 45px;
+  margin-top: -23px;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.2s linear;
+}
+.imagebox-prev {
+  left: 10px;
+  background-image: url('./images/prev.png');
+}
+.imagebox-next {
+  right: 10px;
+  background-image: url('./images/next.png');
+}
+.imagebox-close {
+  position: absolute;
+  right: 0px;
+  bottom: -23px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-position: 50%;
+  background-image: url('./images/close.png');
+  -ms-behavior: url(/backgroundsize.min.htc);
+}
+.imagebox-container img {
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+.imagebox-mask {
+  /*background-color: rgba(0,0,0,0.4);*/
+  z-index: 9999;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.imagebox-mask .spin{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+}
+.resize-handle-n,
+.resize-handle-s,
+.resize-handle-e,
+.resize-handle-w {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 9999;
+  background-color: #fff;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.resize-handle-n {
+	width: 100%;
+  left: 0;
+  top: 0;
+	cursor: ns-resize;
+}
+
+.resize-handle-s {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	cursor: ns-resize;
+}
+
+.resize-handle-e {
+	right: 0;
+	height: 100%;
+	cursor: ew-resize;
+}
+
+.resize-handle-w {
+	left: 0;
+	height: 100%;
+	cursor: ew-resize;
+}
